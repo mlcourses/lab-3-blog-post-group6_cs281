@@ -1,20 +1,24 @@
-# Lab X: Doing stuff with hardware!
-
-Please write a blog post describing your lab here.
-
-This is just an example of how you might structure your blog post, feel free to edit as you wish. For example, you might divide the lab into different sections each with their own intro, instructions, results, and takeaways. Please see the rubric for details on how the post will be evaluated.
+# Lab 3: Ramp Circuit
 
 ## Overview and Motivation
-This week we'll explore...
 
 ## Materials
 
 ## Project Steps
+### Arduino and Potentiometer
 
-## Testing
+### LED A (simplified expression, number that its on, gates used, any reused output, testing)
+
+### LED B
+
+### LED C
+
+### LED D
+
+### LED E
+
+### LED F
+
+### LED G
 
 ## Conclusion
-
-
-
-
