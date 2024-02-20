@@ -62,7 +62,7 @@ After building it, we tested the correctness of this. With LED A wired correctly
 
 
   -- will add a video here of LED A lighting up ..
-  <center><img src="resources/2to1Construction.jpg" width="400" height="600"></center>
+  [LED A Working](https://youtube.com/shorts/AdsHs8C6BbE?feature=share)
 
 
 ### LED B Utsav
