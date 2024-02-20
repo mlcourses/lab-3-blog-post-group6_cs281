@@ -61,8 +61,7 @@ Our SOP Expression for LEDA is ~B2~B1~B0 + ~B2B1~B0+ ~B2B1B0 + B2~B1B0. We minim
 After building it, we tested the correctness of this. With LED A wired correctly, LED A light up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination, thereby validating the functionality of LED A and Circuit design for it. 
 
 
-  -- will add a video here of LED A lighting up ..
-  [LED A Working](https://youtube.com/shorts/AdsHs8C6BbE?feature=share)
+  [Vid of LED A Working](https://youtube.com/shorts/AdsHs8C6BbE?feature=share)
 
 
 ### LED B Utsav
@@ -70,6 +69,7 @@ After building it, we tested the correctness of this. With LED A wired correctly
 To light up LED B, we selected two NOT gates, an AND gate and an OR gate. To determine what gates we need to light up LED B, we minimized our SOP expression of ~(B2)~(B1)~B0 + ~(B2)~(B1) B0 + ~(B2)(B1)~B0 + ~(B2)(B1)B0 + (B2)~(B1)~B0 into ~(B2)+~(B0)B2 using K-Maps. After deterning the necessary gates, we connected them according to the minimized expression. This helped us a lot in terms of efficiency since it simplified the logic and also reduced the number of gates needed to control LED B effectively. The inputs B2, B1, B0 were routed appropriately to the inputs of the gates. With these connected properly, including the IC chips being powered up properly (Vcc, and GND), LED B light up as expected.
 
   -- pic or vid
+  [vid of LED B Working](https://youtube.com/shorts/woT4dJWxtGY?feature=share)
 
   After building it, we tested the correctness of this. With LED B wired correctly, LED B light up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination as expected according to the minimized expression, thereby validating the functionality of LED B and Circuit design for it. 
 
@@ -80,6 +80,7 @@ To light up LED C, We selected a NOT gate, an AND gate and an OR gate. This was 
 After determining the necessary gates (IC chips), we connected them accordingly with our K-Maps, ensuring proper routing of inputs and outputs. As necessary, we powered up the IC chips with Vcc and Gnd for a reliable operation.
 
 -- pic /vid
+[vid of LED C Working](https://youtube.com/shorts/U26imPzQ8zQ?feature=share)
 
 To verify the functionality of the circuit, we conducted thorough testing by applying different input combinations and observing the illumination of LED C. We ensured that it light up as expected for the desired input values to conform the accuracy of our circuit design.
 
