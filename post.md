@@ -50,9 +50,10 @@ Before diving into building the complex combinational circuits, we need to make 
 Looking at the code, we see that the most significant bit of dval corresponds to pin 11, while pin 13 is the least significant.
 The Potentiometer now should be able to adjust the value displayed on the Arduino IDE's terminal, which ranges from 0 to 5 as the knob goes from left to right. As the Arduino and Potentiometer are working correctly, we are ready to build our combinational circuit for the LED display. There is a Logisim construction attached below to confirm that our expressions light up the LEDs correctly.
 
-### LED A (number that its on, simplified expression, gates used, wiring steps, any reused output, testing)
 
-### LED B
+### LED A (number that its on, simplified expression, gates used, wiring steps, any reused output, testing) ... Utsav
+
+### LED B 
 
 ### LED C
 
