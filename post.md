@@ -75,7 +75,7 @@ To light up LED B, we selected two NOT gates, an AND gate and an OR gate. To det
 
 ### LED C Utsav
 
-To light up LED C, We selected a NOT gate, an AND gate and an OR gate. This was derived from our K-Maps which was minimized from the SOP expression. The SOP expression was ~(B2)~(B1)~(B0) + ~(B2)~(B1)(B0) + ~(B2)(B1)(B0) + (B2)~(B1)~(B0) + (B2)~(B1)(B0). Our minimized expression that we derived from this was ~(B1)+(B1.B0). This helped us a lot in terms of efficiency since it simplified the logic and also reduced the number of gates needed to control LED C effectively.
+To light up LED C, We selected a NOT gate, an AND gate and an OR gate. This was derived from our K-Maps which was minimized from the SOP expression. The SOP expression was (~B2)(~B1)(~B0) + (~B2)(~B1)(B0) + (~B2)(B1)(B0) + (B2)(~B1)(~B0) + (B2)(~B1)(B0). Our minimized expression that we derived from this was (~B1)+(B1.B0). This helped us a lot in terms of efficiency since it simplified the logic and also reduced the number of gates needed to control LED C effectively.
 
 After determining the necessary gates (IC chips), we connected them accordingly with our K-Maps, ensuring proper routing of inputs and outputs. As necessary, we powered up the IC chips with Vcc and Gnd for a reliable operation.
 
@@ -86,7 +86,7 @@ To verify the functionality of the circuit, we conducted thorough testing by app
 
 ### LED D
 
-To light up LED D, We used two NOT gates, one OR gate and one XOR gate. The SOP expression that we used for this is ~(B2)~(B1)~(B0) + ~(B2)(B1)~(B0) + ~(B2)(B1)(B0) + (B2)~(B1)(B0). We used K-Maps to simplify this into ~(B2 XOR ~B1) + B1. This helped us a lot in terms of efficiency since it simplified the logic and also reduced the number of gates needed to control LED D effectively. 
+To light up LED D, We used two NOT gates, one OR gate and one XOR gate. The SOP expression that we used for this is ~(B2)~(B1)~(B0) + ~(B2)(B1)~(B0) + ~(B2)(B1)(B0) + (B2)~(B1)(B0). We used K-Maps to simplify this into (~B2 XOR ~B1) + B1. This helped us a lot in terms of efficiency since it simplified the logic and also reduced the number of gates needed to control LED D effectively. 
 
 After determining the necessary gates (IC chips), we connected them accordingly with our K-Maps, ensuring proper routing of inputs and outputs. As necessary, we powered up the IC chips with Vcc and Gnd for a reliable operation.
 
