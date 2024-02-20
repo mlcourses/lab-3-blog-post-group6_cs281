@@ -58,11 +58,10 @@ To make LED A light up when needed, We utilized a combination of XOR, NOT, and O
 Our SOP Expression for LEDA is (~B2)(~B1)(~B0) + (~B2)(B1)(~B0)+ (~B2)(B1)(B0) + (B2)(~B1)(B0). We minimized this expression using K-Maps for efficiency. The K-Map minimal expression for LEDA is ~(B0 XOR B2)+B1. After this, we wired the bredboard using 2 gates, XOR gate, NOT gate and OR gate.
 
 
-After building it, we tested the correctness of this. With LED A wired correctly, LED A light up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination, thereby validating the functionality of LED A and Circuit design for it. 
-
-
 Here is a video of LED A working properly in all cases, to light up from number 0 to 5.
   [Vid of LED A Working](https://youtube.com/shorts/AdsHs8C6BbE?feature=share)
+
+After building it, we tested the correctness of this. With LED A wired correctly, LED A light up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination, thereby validating the functionality of LED A and Circuit design for it. 
 
 
 ### LED B Utsav
@@ -72,7 +71,7 @@ To light up LED B, we selected two NOT gates, an AND gate and an OR gate. To det
 Here is a video of LED B working properly in all cases, to light up from number 0 to 5.
   [vid of LED B Working](https://youtube.com/shorts/woT4dJWxtGY?feature=share)
 
-  After building it, we tested the correctness of this. With LED B wired correctly, LED B light up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination as expected according to the minimized expression, thereby validating the functionality of LED B and Circuit design for it. 
+After building it, we tested the correctness of this. With LED B wired correctly, LED B light up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination as expected according to the minimized expression, thereby validating the functionality of LED B and Circuit design for it. 
 
 ### LED C Utsav
 
@@ -93,6 +92,8 @@ After determining the necessary gates (IC chips), we connected them accordingly 
 
 Here is a video of LED D working properly in all cases, to light up from number 0 to 5.
   [Vid of LED D working](https://youtube.com/shorts/KXEbo0dtIIU?feature=share)
+
+After building it, we tested the correctness of this. With LED D wired correctly, LED D light up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination as expected according to the minimized expression, thereby validating the functionality of LED D and Circuit design for it. 
 
 ### LED E
 
