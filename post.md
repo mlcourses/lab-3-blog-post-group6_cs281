@@ -65,9 +65,21 @@ After building it, we tested the correctness of this. With LED A wired correctly
 
 ### LED B Utsav
 
-To light up LED B, we needed two NOT gates, an AND gate and an OR gate. 
+To light up LED B, we selected two NOT gates, an AND gate and an OR gate. To determine what gates we need to light up LED B, we minimized our SOP expression of ~(B2)~(B1)~B0 + ~(B2)~(B1) B0 + ~(B2)(B1)~B0 + ~(B2)(B1)B0 + (B2)~(B1)~B0 into ~(B2)+~(B0)B2 using K-Maps. After deterning the necessary gates, we connected them according to the minimized expression. This helped us a lot in terms of efficiency since it simplified the logic and also reduced the number of gates needed to control LED B effectively. The inputs B2, B1, B0 were routed appropriately to the inputs of the gates. With these connected properly, including the IC chips being powered up properly (Vcc, and GND), LED B light up as expected.
+
+  -- pic or vid
+
+  After building it, we tested the correctness of this. With LED B wired correctly, LED B light up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination as expected according to the minimized expression, thereby validating the functionality of LED B and Circuit design for it. 
 
 ### LED C Utsav
+
+To light up LED C, We selected a NOT gate, an AND gate and an OR gate. This was derived from our K-Maps which was minimized from the SOP expression. The SOP expression was ~(B2)~(B1)~(B0) + ~(B2)~(B1)(B0) + ~(B2)(B1)(B0) + (B2)~(B1)~(B0) + (B2)~(B1)(B0). Our minimized expression that we derived from this was ~(B1)+(B1.B0). This helped us a lot in terms of efficiency since it simplified the logic and also reduced the number of gates needed to control LED C effectively.
+
+After determining the necessary gates (IC chips), we connected them accordingly with our K-Maps, ensuring proper routing of inputs and outputs. As necessary, we powered up the IC chips with Vcc and Gnd for a reliable operation.
+
+-- pic /vid
+
+To verify the functionality of the circuit, we conducted thorough testing by applying different input combinations and observing the illumination of LED C. We ensured that it light up as expected for the desired input values to conform the accuracy of our circuit design.
 
 ### LED D
 
