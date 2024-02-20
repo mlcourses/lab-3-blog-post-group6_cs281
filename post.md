@@ -51,19 +51,19 @@ Looking at the code, we see that the most significant bit of dval corresponds to
 The Potentiometer now should be able to adjust the value displayed on the Arduino IDE's terminal, which ranges from 0 to 5 as the knob goes from left to right. As the Arduino and Potentiometer are working correctly, we are ready to build our combinational circuit for the LED display. There is a Logisim construction attached below to confirm that our expressions light up the LEDs correctly.
 
 
-### LED A (number that its on, simplified expression, gates used, wiring steps, any reused output, testing) ... Utsav
+### LED A (number that its on, simplified expression, gates used, wiring steps, any reused output, testing)
 
-    To make LED A light up when needed, we used the SOP expression. We made this expression simpler by using K-Maps. Before even focusing on LED A, We created a LED functionality table with with Values from 1 to 5 (the numbers we wanted to light up in LED using Potentiometer). In the table, we had three inputs, B2, B1, B0. Since we have three inputs, our table extended from 0 to 7 (2^n) but we only needed upto 5 so, we didn't care much about 6 and 7. After using our table and SOP/K-Map expressions, We came to a conclusion that to light the number 1, we needed to light up LED A. 
+To make LED A light up when needed, we used the SOP expression. We made this expression simpler by using K-Maps. Before even focusing on LED A, We created a LED functionality table with with Values from 1 to 5 (the numbers we wanted to light up in LED using Potentiometer). In the table, we had three inputs, B2, B1, B0. Since we have three inputs, our table extended from 0 to 7 (2^n) but we only needed upto 5 so, we didn't care much about 6 and 7. After using our table and SOP/K-Map expressions, We came to a conclusion that to light the number 1, we needed to light up LED A. 
 
-    Our SOP Expression for LEDA is ~B2~B1~B0 + ~B2B1~B0+ ~B2B1B0 + B2~B1B0. We minimized this expression using K-Maps for efficiency. The K-Map minimal expression for LEDA is ~(B0 XOR B2)+B1. After this, we wired the bredboard using 2 gates, XOR gate, NOT gate and OR gate.
+Our SOP Expression for LEDA is ~B2~B1~B0 + ~B2B1~B0+ ~B2B1B0 + B2~B1B0. We minimized this expression using K-Maps for efficiency. The K-Map minimal expression for LEDA is ~(B0 XOR B2)+B1. After this, we wired the bredboard using 2 gates, XOR gate, NOT gate and OR gate.
 
 
-    With this wired correctly, LED A light up.
+With this wired correctly, LED A light up.
 
 
 ### LED B Utsav
 
-    To light up LED B, 
+To light up LED B, 
 
 ### LED C Utsav
 
