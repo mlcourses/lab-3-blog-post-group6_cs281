@@ -61,9 +61,11 @@ Our SOP Expression for LEDA is ~B2~B1~B0 + ~B2B1~B0+ ~B2B1B0 + B2~B1B0. We minim
 After building it, we tested the correctness of this. With LED A wired correctly, LED A light up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination, thereby validating the functionality of LED A and Circuit design for it. 
 
 
+  -- will add a video here of LED A lighting up ..
+
 ### LED B Utsav
 
-To light up LED B, 
+To light up LED B, we needed two NOT gates, an AND gate and an OR gate. 
 
 ### LED C Utsav
 
