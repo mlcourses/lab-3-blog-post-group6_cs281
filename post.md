@@ -54,9 +54,13 @@ The Potentiometer now should be able to adjust the value displayed on the Arduin
 
 ### LED A (number that its on, simplified expression, gates used, wiring steps, any reused output, testing)
 
-To make LED A light up when needed, We utilized a combination of XOR, NOT, and OR gates. Spicifically, we minimized the SOP expression needed to light up LED A. We made this expression simpler by using K-Maps. Before even focusing on LED A, We created a LED functionality table with Values from 0 to 5 (the numbers we wanted to light up in LED using Potentiometer). In the table, we had three inputs, B2, B1, B0. Since we have three inputs, our table extended from 0 to 7 (2^n) but we only needed upto 5 so, we didn't care much about 6 and 7. After using our table and SOP/K-Map expressions, We came to a conclusion that to light the number 1(A), we needed to light up LED A. Here is a general functionality table that we expanded on and used to create different SOP Expressions for LED A through LED G.
+To make LED A light up when needed, We utilized a combination of XOR, NOT, and OR gates. Spicifically, we minimized the SOP expression needed to light up LED A. We made this expression simpler by using K-Maps. Before even focusing on LED A, We created a LED functionality table with Values from 0 to 5 (the numbers we wanted to light up in LED using Potentiometer). In the table, we had three inputs, B2, B1, B0. Since we have three inputs, our table extended from 0 to 7 (2^n) but we only needed upto 5 so, we didn't care much about 6 and 7. After using our table and SOP/K-Map expressions, We came to a conclusion that to light the number 1(A), we needed to light up LED A. Here is a general functionality table that we expanded on and used to create different SOP Expressions for LED A through LED G. We expanded this table depending on our three inputs B2, B1 and B0 and created truth table for LED A through LED G.
+
+
+Here is the pic of the General LED Functionality table.
 
 ![Basic Functionality Table](/resources/FunctionalityTable.png)
+
 
 
 
