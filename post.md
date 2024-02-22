@@ -95,10 +95,12 @@ Here is a video of LED D working properly in all cases, to light up from number 
 
 After building it, we tested the correctness of this. With LED D wired correctly, LED D light up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination as expected according to the minimized expression, thereby validating the functionality of LED D and Circuit design for it. 
 
-### LED E
+### LED E (Vuong)
 
-### LED F
 
-### LED G
+
+### LED F (Vuong)
+
+### LED G (Vuong)
 
 ## Conclusion
