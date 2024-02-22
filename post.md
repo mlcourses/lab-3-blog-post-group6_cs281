@@ -134,11 +134,12 @@ Now let's proceed to LED F. If you're run out of holes that are in the same row 
 ### LED G (Vuong)
 Let's roll to our last LED, LED G. This one is simple. The boolean expression for this one is `B1 + B2`:
 
-- *Wire `B1+B2`:** Wire `B1` to one input pin of the 2-input OR gate on the 7432 OR chip. Wire `B2` to the other input pin of the OR gate. 
+- **Wire `B1+B2`:** Wire `B1` to one input pin of the 2-input OR gate on the 7432 OR chip. Wire `B2` to the other input pin of the OR gate. 
 
 - **Connect the output with the LED:** Wire output of the OR gate to another empty row on the breadboard near the 7-segment. Take another resistor. Connect one end of it to the wire connected to the `B1+B2` we just built (connect it to one hole on the row the wire is pinned on). Connect the other end of the resistor to the G pin on the 7-segment. 
 
 - **Testing:** Because LED G is in the middle of the LED board, it should light up when our Volt value is at 2, 3, 4, 5. The video below describes how the LED G works. 
 
 
-## Conclusion
+## Conclusion (Vuong's still working on it)
+This lab is an opportunity to learn how to desgin a complete combinational circuit that allows us to modify the Voltage to achieve the result we want to see. 
