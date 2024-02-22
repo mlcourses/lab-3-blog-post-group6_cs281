@@ -50,6 +50,7 @@ Before diving into building the complex combinational circuits, we need to make 
 Looking at the code, we see that the most significant bit of dval corresponds to pin 11, while pin 13 is the least significant.
 The Potentiometer now should be able to adjust the value displayed on the Arduino IDE's terminal, which ranges from 0 to 5 as the knob goes from left to right. As the Arduino and Potentiometer are working correctly, we are ready to build our combinational circuit for the LED display. There is a Logisim construction attached below to confirm that our expressions light up the LEDs correctly.
 
+**Important notes:** We will work with maultiple resistors in this lab. Most of them will be placed close to eahc other. In order to keep our current stable, avoid touching those resistors each other. 
 
 ### LED A (number that its on, simplified expression, gates used, wiring steps, any reused output, testing)
 
@@ -97,10 +98,39 @@ After building it, we tested the correctness of this. With LED D wired correctly
 
 ### LED E (Vuong)
 
+Now we will continue to build the circuit that lights up LED E. This one has it circuit much more simple than the previous ones. The boolean expression for LED E is `(~B2)(~B0)`. See that we need the negation of the 2 inputs. Follow the istructions: 
+
+- **Negate `B0` and `B2`:** First, we wire one hole on the same role with `B2` with an input pin on the Inverter gate (7404 IC chip) to negate `B2`. Similarly, wire a hole on the same role with `B0` to another inverter input pin on the 7404 (inverter) chip. 
+
+- **Connect 2 outputs `~B0` and `~B2` together:** Choose a 2-input AND gate on the 7400 AND chip.  Wire the output pin of `~B2` on the 7404 INVERTER chip and wire with 1 input pin on the AND 7400 chip. Next, wire the output pin of `~B0` on the same 7404 chip and connect it to the other input pin. We're nearly done with our circuit for the LED E. Now we only need to connect the output of the circuit to the LED.
+
+- **Connect the circuit to the 7-segment:** Now, wire the output of the AND gate we just built to an empty row on the breadboard, near the 7-segment. Take a resistor, wire one end of the resistor with the output of the circuit we just built. Connect the other end to the pin E on the 7-segment. Now, we're done with our cuircuit for LED E. 
+
+- **Testing:** Due to the position of LED E, it should lights up when our Volt value is at 0 and 2. See the video to understand how it works.
+
+[Video showing how LED lights up in the circuit](https://drive.google.com/file/d/1Lqr9JXy8fbRZOmIBiVwSRJ_zQhbCa_DC/view?t%253D5)
 
 
 ### LED F (Vuong)
+Now let's proceed to LED F. If you're run out of holes that are in the same row with any output, you can create more connected holes!. Take a wire, connect one end of it with a hole on the same row with any input `B0, B1,B2` that don't have any holes left. Connect the other end with another empty row on the breadboard, close to that input orginal row. Now, you have any rows connected to that input. Now, let's build LED F (with boolean expression `B2 + (~B0)(~B1)`) circuit step by step:
+
+- **Build `(~B0)(~B1)`:** First, we negate `B0`. Remember from the previous circuit of LED E we just negated `B0`. We will use that output to avoid making our circuit overly complicated. On the row having the output pin of `~B0`, connect a wire from that hole to one of the input pin on a 2-input AND gate of the 7400 AND chip. Do you remember that we also had `~B1` built in the LED C's circuit. Let's reuse that. Similarly to `~B0`, wire the output of `~B1` with the other input pin of the AND gate. We're done building `(~B0)(~B1)`!
+
+- **Build `B2 + (~B0)(~B1)`:** Wire the output of `(~B0)(~B1)` to one input pin of a 2-input OR gate on the 7432 OR chip. Wire `B2` with the other input pin. 
+
+- **Connect with the LED F:** Wire the output of the OR gate to an empty row on the breadboard (let's choose one near the 7-segment). Take a resistor. Connect one end of the resistor to the row that we just pinned the output of circuit in. Connect the other end of the resistor to the F pin on the 7-segment. And... we're done builidng circuit for LED F.
+
+- **Testing:** Due to the position of LED F, if we have our circuit correct, LED F will light up when the Volt out value of our circuit is at 0, 4, 5. See the video to understand how it works. 
+
 
 ### LED G (Vuong)
+Let's roll to our last LED, LED G. This one is simple. The boolean expression for this one is `B1 + B2`:
+
+- *Wire `B1+B2`:** Wire `B1` to one input pin of the 2-input OR gate on the 7432 OR chip. Wire `B2` to the other input pin of the OR gate. 
+
+- **Connect the output with the LED:** Wire output of the OR gate to another empty row on the breadboard near the 7-segment. Take another resistor. Connect one end of it to the wire connected to the `B1+B2` we just built (connect it to one hole on the row the wire is pinned on). Connect the other end of the resistor to the G pin on the 7-segment. 
+
+- **Testing:** Because LED G is in the middle of the LED board, it should light up when our Volt value is at 2, 3, 4, 5. The video below describes how the LED G works. 
+
 
 ## Conclusion
