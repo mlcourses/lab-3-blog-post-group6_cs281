@@ -1,7 +1,7 @@
 # Lab 3: Ramp Circuit
 
 ## Overview and Motivation
-This lab is an introduction to designing circuit that changes light signals on LED display by modifying the voltage values going through it. We will get to know Voltage Divider and Potentiometer. Specifically, we will use a potentiometer to change the resistance of a voltage divider, which changes the voltage going through the LED and, accordingly, changes the numbers (light signals) on the LED display. Sounds intimidating? Hang in there, this lab will be interesting...!
+This lab is an introduction to adjusting voltage and resistance in our circuit to control the behavior of LEDs. We will get to know Voltage Divider and Potentiometer. Specifically, we will use a potentiometer to change the resistance of a voltage divider, which changes the voltage going through the LED and, accordingly, changes the numbers (light signals) on the LED display. Sounds intimidating? Hang in there, this lab will be interesting...!
 
 The lab is useful in improving our skills in writing SOP expression, simplifying Boolean expression using K-map, and using Logisim to check the correctness of our circuit. After this lab, you will be able to build combinational circuit based on the combinational logic using multiple electrical components to modify the voltage and resistance such as Voltage Divider, resistors, and Arduino. 
 
