@@ -50,7 +50,7 @@ Before diving into building the complex combinational circuits, we need to make 
 Looking at the code, we see that the most significant bit of dval corresponds to pin 11, while pin 13 is the least significant.
 The Potentiometer now should be able to adjust the value displayed on the Arduino IDE's terminal, which ranges from 0 to 5 as the knob goes from left to right. As the Arduino and Potentiometer are working correctly, we are ready to build our combinational circuit for the LED display. There is a Logisim construction attached below to confirm that our expressions light up the LEDs correctly.
 
-**Important notes:** We will work with maultiple resistors in this lab. Most of them will be placed close to eahc other. In order to keep our current stable, avoid touching those resistors each other. 
+**Important notes:** We will work with multiple resistors in this lab. Most of them will be placed close to each other. In order to keep our current stable, avoid touching those resistors each other. 
 
 ### LED A (number that its on, simplified expression, gates used, wiring steps, any reused output, testing)
 
@@ -142,4 +142,7 @@ Let's roll to our last LED, LED G. This one is simple. The boolean expression fo
 
 
 ## Conclusion (Vuong's still working on it)
-This lab is an opportunity to learn how to desgin a complete combinational circuit that allows us to modify the Voltage to achieve the result we want to see. 
+This lab is an opportunity to learn how to desgin a complete combinational circuit that allows us to modify the Voltage to achieve the result we want to see. To sum up, we ahve worked with several components in this lab:
+- **7-segment display**: We're used to the logci probe on our breadboard. The 7-segment display is more like a combination of all LEDs on our logic probe that has its LED arranged so that it can send out numerical signals. As it's name, a 7-segment display has 7 pin where we can wire and connect our inputs to them. 
+
+- 
