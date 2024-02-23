@@ -177,8 +177,14 @@ Let's roll to our last LED, LED G. This one is simple. The boolean expression fo
 
 
 ## Conclusion (Vuong's still working on it)
-This lab is an opportunity to learn how to desgin a complete combinational circuit that allows us to modify the Voltage to achieve the result we want to see. To sum up, we ahve worked with several components in this lab:
+This lab is an opportunity to learn how to desgin a complete combinational circuit that allows us to modify the Voltage values to achieve the result we want to see. To sum up, we have worked with several topcis/electrical components in this lab:
 
-- **7-segment display**: We're used to the logic probe on our breadboard. The 7-segment display is more like a combination of all LEDs on our logic probe that has its LED arranged so that it can send out numerical signals. As it's name, a 7-segment display has 7 pins where we can wire and connect our circuit to them. 
+- **SOP expression and how to use K-map in designing circuit:** This lab gives you a chance to use K-map to simplify SOP expression which is useful for building circuit. Utilizing K-map makes the circuit much simplified and easy to physically wire. 
 
-- 
+- **7-segment display**: We're used to the logic probe on our breadboard. The 7-segment display is like a combination of all LEDs on our logic probe that has its LED arranged so that it can send out numerical signals. Just like its name, a 7-segment display has 7 pins where we can wire and connect our circuit to. Each pin takes in an input signal that will light up the LED at that corner. All 7 LEDs (represent 7 pins) form a number ranging from 0 to 9 (we only generate 0-5 signal in this lab). The 7-segment display is used as a Voltage indicator in this lab. 
+
+- **Analog Voltage Divider:** We used Analog Voltage Divider to modify the voltage value going through our LEDs. Due to the way we wired our circuit (according to our input signals), we can control the signal of the 7-segment display by modifying our Analog Voltage Divider. 
+
+- **Use resistors:** Different from other labs, we use more resistors in this lab to modify the voltage values. Now, you see how we can use a small device to modify the light signals as we want!
+
+- **Practice putting everything together!** Designing, writing and simplifying SOP expressions are only part of the work in building a computer system. To successfully designing and building a system, we also need to practice wiring and working with complicated physical circuit. Due to the more complex design (compared to other previous labs) of the circuit in this lab, we are given a chacne to practice arranging multiple components on the breadboard and color-coding our circuit. Keeping our circuit organized and neat is an important step for debugging later. 
