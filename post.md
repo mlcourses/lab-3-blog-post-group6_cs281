@@ -177,4 +177,4 @@ Let's roll to our last LED, LED G. This one is simple. The boolean expression fo
 
 
 ## Conclusion (Vuong's still working on it)
-This lab is an opportunity to learn how to design a complete combinational circuit that allows us to modify the Voltage to achieve the result we want to see. 
+This lab is an opportunity to learn how to design a complete combinational circuit that allows us to modify the Voltage to achieve the desired result, which is displayed using a 7-segment LED display. The procedures honed our skills in wiring, testing, as well as debugging (both hardware bugs and software bugs). They also allow us to apply our knowledge of SOP designs and K-Maps, which are crucial in building efficient circuits and hardware.
