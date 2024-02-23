@@ -86,7 +86,7 @@ After utilizing K-map to simplify the SOP expression, you are recommended to tes
 
 [This is how the circuit looks like on Logisim](https://drive.google.com/file/d/19VX75Vw6b9X0MN2GeTNPy5XCgI3wjcKC/view)
 
-The circuit might look complicated but as logn as it follows correctly our truth table, we are good to go!
+The circuit might look complicated but as long as it follows correctly our truth table, we are good to go!
 
 ### Wire up the Voltage divider:
 We will have to wire 7 LEDs in the lab. However, there is a general way for how we will wire our Voltage Diver and the potentiometer.
@@ -193,7 +193,7 @@ Now we will continue to build the circuit that lights up LED E. This one has a m
 
 - **Connect the circuit to the 7-segment:** Now, wire the output of the AND gate we just built to an empty row on the breadboard, near the 7-segment. Take a resistor, wire one end of the resistor with the output of the circuit we just built. Connect the other end to the pin E on the 7-segment. Now, we're done with our circuit for LED E. 
 
-- **Testing:** Due to the position of LED E, it should lights up when our Volt value is at 0 and 2. See the video to understand how it works.
+- **Testing:** Due to the position of LED E, it should light up when our Volt value is at 0 and 2. See the video to understand how it works.
 
 [Video showing how LED lights up in the circuit](https://drive.google.com/file/d/1Lqr9JXy8fbRZOmIBiVwSRJ_zQhbCa_DC/view?t%253D5)
 
@@ -237,5 +237,5 @@ This lab is an opportunity to learn how to design a complete combinational circu
 
 - **Use resistors:** Different from other labs, we use more resistors in this lab to modify the voltage values. Now, you see how we can use a small device to modify the light signals as we want!
 
-- **Practice putting everything together!** Designing, writing and simplifying SOP expressions are only some parts of the work building a computer system. To successfully designing and building a system, we also need to practice wiring and working with complicated physical circuit. Due to the more complex design (compared to other previous labs) of the circuit in this lab, we are given a chacne to practice arranging multiple components on the breadboard and color-coding our circuit. Keeping our circuit organized and neat is an important step for debugging later. 
+- **Practice putting everything together!** Designing, writing and simplifying SOP expressions are only some parts of the work building a computer system. To successfully designing and building a system, we also need to practice wiring and working with complicated physical circuit. Due to the more complex design (compared to other previous labs) of the circuit in this lab, we are given a chance to practice arranging multiple components on the breadboard and color-coding our circuit. Keeping our circuit organized and neat is an important step for debugging later. 
 
