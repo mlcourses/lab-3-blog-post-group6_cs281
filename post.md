@@ -48,13 +48,13 @@ Before diving into building the complex combinational circuits, we need to make 
     }
 
 Looking at the code, we see that the most significant bit of dval corresponds to pin 11, while pin 13 is the least significant.
-The Potentiometer now should be able to adjust the value displayed on the Arduino IDE's terminal, which ranges from 0 to 5 as the knob goes from left to right. As the Arduino and Potentiometer are working correctly, we are ready to build our combinational circuit for the LED display. There is a Logisim construction attached below to confirm that our expressions light up the LEDs correctly.
+The Potentiometer now should be able to adjust the value displayed on the Arduino IDE's terminal, which ranges from 0 to 5 as the knob goes from left to right. As the Arduino and Potentiometer are working correctly, we are ready to build our combinational circuit for the LED display.
 
-**Important notes:** We will work with multiple resistors in this lab. Most of them will be placed close to each other. In order to keep our current stable, avoid touching those resistors each other. 
+**Important notes:** We will work with multiple resistors in this lab. The resistors are placed next to the LED segments so that the current does not overload and damage the LED. Most of them will be placed close to each other. In order to keep our current stable, make sure those resistors do not come into contact. 
 
 ### LED A (number that its on, simplified expression, gates used, wiring steps, any reused output, testing)
 
-To make LED A light up when needed, We utilized a combination of XOR, NOT, and OR gates. We minimized the SOP expression needed to light up LED A by using K-Maps. Before even focusing on LED A, we created a LED functionality table with Values from 0 to 5 (the numbers we wanted to light up in LED using Potentiometer). In the table, we had three inputs, B2, B1, B0. Since we have three inputs, our table extended from 0 to 7 (2^n) but we only needed upto 5 so we do not have to care about 6 and 7. After using our table and SOP/K-Map expressions, we came to a conclusion that to light the number 1(A), we needed to light up LED A. Here is a general functionality table that we expanded on and used to create different SOP Expressions for LED A through LED G. We expanded this table depending on our three inputs B2, B1 and B0 and created truth table for LED A through LED G.
+To make LED A light up when needed, We utilized a combination of XOR, NOT, and OR gates. We minimized the SOP expression needed to light up LED A by using K-Maps. Before even focusing on LED A, we created a LED functionality table with values from 0 to 5 (the numbers we wanted to light up in LED using Potentiometer). In the table, we had three inputs, B2, B1, B0. Since we have three inputs, our table extended from 0 to 7, but we only needed upto 5 so we do not have to care about 6 and 7. Here is a general functionality table that we expanded on and used to create different SOP Expressions for LED A through LED G. We expanded this table depending on our three inputs B2, B1 and B0 and created a truth table for LED A through LED G.
 
 
 Here is the pic of the General LED Functionality table.
