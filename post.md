@@ -1,9 +1,31 @@
 # Lab 3: Ramp Circuit
 
 ## Overview and Motivation
-This lab will introduce us to changing numbers on a LED display using a knob. Specifically, we will use a potentiometer to change the resistance of a voltage divider, which in turn change the numbers on the LED display. The lab will arm us with background and skills in combinational logic, analog and digital input and output, SOP designs and Boolean Simplification, as well as electrical components such as resistors and Ohm's Law. Since the circuit is complex, it helps us practice wiring and color coding skills.
+This lab is an introduction to designing circuit that changes light signals on LED display by modifying the voltage values going through it. We will get to know Voltage Divider and Potentiometer. Specifically, we will use a potentiometer to change the resistance of a voltage divider, which changes the voltage going through the LED and, accordingly, changes the numbers (light signals) on the LED display. Sounds intimidating? Hang in there, this lab will be interesting...!
+
+The lab is useful in improving our skills in writing SOP expression, simplifying Boolean expression using K-map, and using Logisim to check the correctness of our circuit. After this lab, you will be able to build combinational circuit based on the combinational logic using multiple electrical components to modify the voltage and resistance such as Voltage Divider, resistors, and Arduino. 
+
+The complexity of this combinational circuit will also give us a chance to practice color-coding our wires and organizing our circuit. 
+
 ## Materials
-Like other labs, we will need a PB-503 breadboard and an Arduino. We also need a 7-segment LED display that can show numbers from 0-5 using combinational circuits.
+Like other labs, we will need a PB-503 breadboard and an Arduino. We also need a 7-segment LED display that can show numbers from 0-5 controlled by combinational circuits.
+
+As mentioned above, we will use Voltage Divider and Potentiometer for the circuit in this lab. First, let's see what they are:
+
+- **The Voltage Divide**r: is an *arrangment of resistors*. The goal of building a voltage divider is to modify the voltage value going through a circuit as we want. 
+
+[This is an example of the arrangement of resistors (creating a Voltage Divider) compared to a simple circuit without the voltage divider](https://drive.google.com/file/d/1-N5O_i_QeqHqdP0CTq7SlfFA_EzuxVC9/view)
+
+- **The potentiometer (the "pot"):** A potentiometer is a variable resistor that allows us to adjust our voltage divider. The idea behind the way the potentiometer on voltage divider is that it changes the resistance values going through the voltage divider. Hence, we will change the voltage values based on the effect of resistance onto voltage value of a circuit, which is presented by the formula:
+[Simple voltage formula](https://drive.google.com/file/d/1oqhVUFsj-R9r1wd_B5hHpJMXX-YNMIA2/view)
+
+[Now with the voltage divider, our formula turns into](https://drive.google.com/file/d/1_H_ns-8sXkxy_MkouRRxsUaltquBEgTu/view)
+
+- The "pot" will modify the resistance value in order to create our target voltage values for the circuit.
+
+On our familiar breadboard, there are 2 potentiometers. The 10k potentiometer is a knob at the bottom of the breadboard. The total sum of resistance is `10kΩ`. By changing the knob, we can achieve various values for R1 and R2 between 0 and 10kΩ so long as their sum is `10kΩ`. There is also a 1k potentiometer which acts in the same way except the total resistance is `1kΩ` instead of `10kΩ`. 
+
+That's enough theory, let's build our circuit...!
 
 ## Project Steps
 ### Arduino and Potentiometer
@@ -47,21 +69,26 @@ Before diving into building the complex combinational circuits, we need to make 
         delay(WAIT);
     }
 
-Looking at the code, we see that the most significant bit of dval corresponds to pin 11, while pin 13 is the least significant.
+Looking at the code, we see that the most significant bit of dval corresponds to pin `11`, while pin `13` is the least significant.
 The Potentiometer now should be able to adjust the value displayed on the Arduino IDE's terminal, which ranges from 0 to 5 as the knob goes from left to right. As the Arduino and Potentiometer are working correctly, we are ready to build our combinational circuit for the LED display.
 
 **Important notes:** We will work with multiple resistors in this lab. The resistors are placed next to the LED segments so that the current does not overload and damage the LED. Most of them will be placed close to each other. In order to keep our current stable, make sure those resistors do not come into contact. 
+
+### Wire up the Voltage divider:
+We will have to wire 7 LEDs in the lab. However, there is a general way for how we will wire our Voltage Diver and the potentiometer.
+
+[General way for how we will wire our Voltage Diver and the potentiometer](https://drive.google.com/file/d/1fIGjMOBcgIS0VQIW5IXJbyNZZz6VZZty/view)
+
+Basically, the leftmost connection column of the pot will be wired to `GND`. The rightmost column of the "pot" will be wired to `+5V`. The middle connections will pick off the voltage V depending on the position of the potentiometer knob
 
 ### LED A (number that its on, simplified expression, gates used, wiring steps, any reused output, testing)
 
 To make LED A light up when needed, We utilized a combination of XOR, NOT, and OR gates. We minimized the SOP expression needed to light up LED A by using K-Maps. Before even focusing on LED A, we created a LED functionality table with values from 0 to 5 (the numbers we wanted to light up in LED using Potentiometer). In the table, we had three inputs, B2, B1, B0. Since we have three inputs, our table extended from 0 to 7, but we only needed upto 5 so we do not have to care about 6 and 7. Here is a general functionality table that we expanded on and used to create different SOP Expressions for LED A through LED G. We expanded this table depending on our three inputs B2, B1 and B0 and created a truth table for LED A through LED G.
 
 
-Here is the pic of the General LED Functionality table.
+Here is the pictures of the General LED Functionality table.
 
 ![Basic Functionality Table](/resources/FunctionalityTable.png)
-
-
 
 
 Our SOP Expression for LED A is `(~B2)(~B1)(~B0) + (~B2)(B1)(~B0)+ (~B2)(B1)(B0) + (B2)(~B1)(B0)`. We minimized this expression using K-Maps for efficiency. The K-Map minimal expression for LED A is `~(B0 XOR B2)+B1`. After this, we wired the breadboard using 2 gates, XOR gate, NOT gate and OR gate. Here are the steps taken to light up LED A:
@@ -77,7 +104,8 @@ Our SOP Expression for LED A is `(~B2)(~B1)(~B0) + (~B2)(B1)(~B0)+ (~B2)(B1)(B0)
 
 
 Here is a video of LED A working properly in all cases, to light up from number 0 to 5.
-  [Vid of LED A Working](https://youtube.com/shorts/AdsHs8C6BbE?feature=share)
+
+  [Video of LED A working](https://youtube.com/shorts/AdsHs8C6BbE?feature=share)
 
 After building the circuit, we tested its correctness. With LED A's combinational logic wired correctly, it lights up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination, thereby validating the functionality of LED A and Circuit design for it. 
 
@@ -182,6 +210,8 @@ This lab is an opportunity to learn how to desgin a complete combinational circu
 - **SOP expression and how to use K-map in designing circuit:** This lab gives you a chance to use K-map to simplify SOP expression which is useful for building circuit. Utilizing K-map makes the circuit much simplified and easy to physically wire. 
 
 - **7-segment display**: We're used to the logic probe on our breadboard. The 7-segment display is like a combination of all LEDs on our logic probe that has its LED arranged so that it can send out numerical signals. Just like its name, a 7-segment display has 7 pins where we can wire and connect our circuit to. Each pin takes in an input signal that will light up the LED at that corner. All 7 LEDs (represent 7 pins) form a number ranging from 0 to 9 (we only generate 0-5 signal in this lab). The 7-segment display is used as a Voltage indicator in this lab. 
+
+- 
 
 - **Analog Voltage Divider:** We used Analog Voltage Divider to modify the voltage value going through our LEDs. Due to the way we wired our circuit (according to our input signals), we can control the signal of the 7-segment display by modifying our Analog Voltage Divider. 
 
