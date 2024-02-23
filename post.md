@@ -135,7 +135,7 @@ To light up LED B, we selected two NOT gates, an AND gate and an OR gate. To det
 - **OR Operation with `~B2`:** Now, we again used the previous 7404 IC Chip to invert `B2` since one 7404 IC chip can work as 6 different NOT gates. Then, we took this output and inputted it in an OR Operation (7432 IC chip). The second input for the OR operation was the output of AND operation between `~B0.B2`. After this, we took the output of this operation and connected this into our LED B to light it up.
 
 
-- **Testing:**LED B needs to be light up when our voltage value is at 0, 1, 2, 3 and 4.
+- **Testing:** LED B needs to be light up when our voltage value is at 0, 1, 2, 3 and 4.
 
 Here is a video of LED B working properly in all cases, lighting up from number 0 to 5.
   [Video of LED B working](https://youtube.com/shorts/woT4dJWxtGY?feature=share)
@@ -157,6 +157,7 @@ To light up LED C, We selected a NOT gate, an AND gate and an OR gate. This was 
 After determining the necessary gates (IC chips) and executing the wiring process, we connected them accordingly with our K-Maps, ensuring proper routing of inputs and outputs. As always, we powered up the IC chips with Vcc and Gnd for a reliable operation.
 
 Here is a video of LED C working properly in all cases, lighting up from number 0 to 5.
+
   [Video of LED C working](https://youtube.com/shorts/U26imPzQ8zQ?feature=share)
 
 To verify the functionality of the circuit, we conducted thorough testing by applying different input combinations and observing the illumination of LED C. We ensured that it lights up as expected for the desired input values to confirm the accuracy of our circuit design.
@@ -177,6 +178,7 @@ To light up LED D, We used two NOT gates, one OR gate and one XOR gate. The SOP 
 After determining the necessary gates (IC chips) and managing the wiring process, we connected them accordingly with our K-Maps, ensuring proper routing of inputs and outputs. Again, we powered up the IC chips with Vcc and Gnd for a reliable operation.
 
 Here is a video of LED D working properly in all cases, to light up from number 0 to 5.
+
   [Video of LED D working](https://youtube.com/shorts/KXEbo0dtIIU?feature=share)
 
 After building the circuit for D, we tested its correctness. With LED D's combinational logic wired correctly, it lights up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination as expected according to the minimized expression, thereby validating the functionality of LED D and Circuit design for it. 
