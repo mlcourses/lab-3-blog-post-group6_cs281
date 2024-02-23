@@ -183,7 +183,7 @@ Here is a video of LED D working properly in all cases, to light up from number 
 
 After building the circuit for D, we tested its correctness. With LED D's combinational logic wired correctly, it lights up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination as expected according to the minimized expression, thereby validating the functionality of LED D and Circuit design for it. 
 
-### LED E (Vuong)
+### LED E 
 
 Now we will continue to build the circuit that lights up LED E. This one has a much simpler circuit than the previous ones. The boolean expression for LED E is `(~B2)(~B0)`. See that we need the negation of the 2 inputs. Follow the instructions: 
 
@@ -198,7 +198,7 @@ Now we will continue to build the circuit that lights up LED E. This one has a m
 [Video showing how LED lights up in the circuit](https://drive.google.com/file/d/1Lqr9JXy8fbRZOmIBiVwSRJ_zQhbCa_DC/view?t%253D5)
 
 
-### LED F (Vuong)
+### LED F 
 Now let's proceed to LED F. If you're run out of holes that are in the same row with any output, you can create more connected holes!. Take a wire, connect one end of it with a hole on the same row with any input `B0, B1,B2` that don't have any holes left. Connect the other end with another empty row on the breadboard, close to that input orginal row. Now, you have any rows connected to that input. Now, let's build LED F (with boolean expression `B2 + (~B0)(~B1)`) circuit step by step:
 
 - **Build `(~B0)(~B1)`:** First, we negate `B0`. Remember from the previous circuit of LED E we just negated `B0`. We will use that output to avoid making our circuit overly complicated. On the row having the output pin of `~B0`, connect a wire from that hole to one of the input pin on a 2-input AND gate of the 7400 AND chip. Do you remember that we also had `~B1` built in the LED C's circuit. Let's reuse that. Similarly to `~B0`, wire the output of `~B1` with the other input pin of the AND gate. We're done building `(~B0)(~B1)`!
@@ -212,7 +212,7 @@ Now let's proceed to LED F. If you're run out of holes that are in the same row 
 [Video showing how LED F works](https://drive.google.com/file/d/14bWkAK4fRdiGQ1Mi1y7thp1DeyaHTyhj/view?t%253D3)
 
 
-### LED G (Vuong)
+### LED G 
 Let's roll to our last LED, LED G. This one is simple. The boolean expression for this one is `B1 + B2`:
 
 - **Wire `B1+B2`:** Wire `B1` to one input pin of the 2-input OR gate on the 7432 OR chip. Wire `B2` to the other input pin of the OR gate. 
@@ -224,7 +224,7 @@ Let's roll to our last LED, LED G. This one is simple. The boolean expression fo
 [Video showing how LED F works](https://drive.google.com/file/d/1cngTwDoqp9G6lHq0j2LeBOV3rAf0gvH7/view?t%253D2)
 
 
-## Conclusion (Vuong's still working on it)
+## Conclusion 
 This lab is an opportunity to learn how to design a complete combinational circuit that allows us to modify the Voltage values to achieve the result we want to see. To sum up, we have worked with several topcis and electrical components in this lab:
 
 - **SOP expression and how to use K-map in designing circuit:** This lab gives you a chance to use K-map to simplify SOP expression which is useful for building circuit. Utilizing K-map makes the circuit much simplified and easy to physically wire. 
@@ -238,3 +238,4 @@ This lab is an opportunity to learn how to design a complete combinational circu
 - **Use resistors:** Different from other labs, we use more resistors in this lab to modify the voltage values. Now, you see how we can use a small device to modify the light signals as we want!
 
 - **Practice putting everything together!** Designing, writing and simplifying SOP expressions are only some parts of the work building a computer system. To successfully designing and building a system, we also need to practice wiring and working with complicated physical circuit. Due to the more complex design (compared to other previous labs) of the circuit in this lab, we are given a chacne to practice arranging multiple components on the breadboard and color-coding our circuit. Keeping our circuit organized and neat is an important step for debugging later. 
+
