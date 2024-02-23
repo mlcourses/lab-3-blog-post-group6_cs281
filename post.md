@@ -72,14 +72,14 @@ Before diving into building the complex combinational circuits, we need to make 
 Looking at the code, we see that the most significant bit of dval corresponds to pin `11`, while pin `13` is the least significant.
 The Potentiometer now should be able to adjust the value displayed on the Arduino IDE's terminal, which ranges from 0 to 5 as the knob goes from left to right. As the Arduino and Potentiometer are working correctly, we are ready to build our combinational circuit for the LED display.
 
-**Important notes:** We will work with multiple resistors in this lab. The resistors are placed next to the LED segments so that the current does not overload and damage the LED. Most of them will be placed close to each other. In order to keep our current stable, make sure those resistors do not come into contact. 
+**Important notes:** We will work with multiple resistors in this lab. The resistors are placed next to the LED segments so that the current does not overload and damage the LED. Most of them will be placed close to each other. In order to keep our current stable, make sure those resistors do not touch each other.
 
 ### Wire up the Voltage divider:
 We will have to wire 7 LEDs in the lab. However, there is a general way for how we will wire our Voltage Diver and the potentiometer.
 
 [General way for how we will wire our Voltage Diver and the potentiometer](https://drive.google.com/file/d/1fIGjMOBcgIS0VQIW5IXJbyNZZz6VZZty/view)
 
-Basically, the leftmost connection column of the pot will be wired to `GND`. The rightmost column of the "pot" will be wired to `+5V`. The middle connections will pick off the voltage V depending on the position of the potentiometer knob
+Basically, the leftmost connection column of the pot will be wired to `GND`. The rightmost column of the "pot" will be wired to `+5V`. The middle connections will pick off the voltage V depending on the position of the potentiometer knob. This is considered as output voltage. 
 
 ### LED A (number that its on, simplified expression, gates used, wiring steps, any reused output, testing)
 
@@ -193,6 +193,8 @@ Now let's proceed to LED F. If you're run out of holes that are in the same row 
 
 - **Testing:** Due to the position of LED F, if we have our circuit correct, LED F will light up when the Volt out value of our circuit is at 0, 4, 5. See the video to understand how it works. 
 
+[Video showing how LED F works](https://drive.google.com/file/d/14bWkAK4fRdiGQ1Mi1y7thp1DeyaHTyhj/view?t%253D3)
+
 
 ### LED G (Vuong)
 Let's roll to our last LED, LED G. This one is simple. The boolean expression for this one is `B1 + B2`:
@@ -203,6 +205,8 @@ Let's roll to our last LED, LED G. This one is simple. The boolean expression fo
 
 - **Testing:** Because LED G is in the middle of the LED board, it should light up when our Volt value is at 2, 3, 4, 5. The video below describes how the LED G works. 
 
+[Video showing how LED F works](https://drive.google.com/file/d/1cngTwDoqp9G6lHq0j2LeBOV3rAf0gvH7/view?t%253D2)
+
 
 ## Conclusion (Vuong's still working on it)
 This lab is an opportunity to learn how to desgin a complete combinational circuit that allows us to modify the Voltage values to achieve the result we want to see. To sum up, we have worked with several topcis/electrical components in this lab:
@@ -211,9 +215,9 @@ This lab is an opportunity to learn how to desgin a complete combinational circu
 
 - **7-segment display**: We're used to the logic probe on our breadboard. The 7-segment display is like a combination of all LEDs on our logic probe that has its LED arranged so that it can send out numerical signals. Just like its name, a 7-segment display has 7 pins where we can wire and connect our circuit to. Each pin takes in an input signal that will light up the LED at that corner. All 7 LEDs (represent 7 pins) form a number ranging from 0 to 9 (we only generate 0-5 signal in this lab). The 7-segment display is used as a Voltage indicator in this lab. 
 
-- 
+- **Voltage Divider:** We used Analog Voltage Divider to modify the voltage value going through our LEDs. Due to the way we wired our circuit (according to our input signals), we can control the signal of the 7-segment display by modifying our Analog Voltage Divider. 
 
-- **Analog Voltage Divider:** We used Analog Voltage Divider to modify the voltage value going through our LEDs. Due to the way we wired our circuit (according to our input signals), we can control the signal of the 7-segment display by modifying our Analog Voltage Divider. 
+- **Potentiometer:** or "pot" is used to modify the resistance of the voltage divider.  
 
 - **Use resistors:** Different from other labs, we use more resistors in this lab to modify the voltage values. Now, you see how we can use a small device to modify the light signals as we want!
 
