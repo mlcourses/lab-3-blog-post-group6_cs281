@@ -12,11 +12,12 @@ Like other labs, we will need a PB-503 breadboard and an Arduino. We also need a
 
 As mentioned above, we will use Voltage Divider and Potentiometer for the circuit in this lab. First, let's see what they are:
 
-- **The Voltage Divide**r: is an *arrangment of resistors*. The goal of building a voltage divider is to modify the voltage value going through a circuit as we want. 
+- **The Voltage Divider**: is an *arrangment of resistors*. The goal of building a voltage divider is to modify the voltage value going through a circuit as we want. 
 
 [This is an example of the arrangement of resistors (creating a Voltage Divider) compared to a simple circuit without the voltage divider](https://drive.google.com/file/d/1-N5O_i_QeqHqdP0CTq7SlfFA_EzuxVC9/view)
 
-- **The potentiometer (the "pot"):** A potentiometer is a variable resistor that allows us to adjust our voltage divider. The idea behind the way the potentiometer on voltage divider is that it changes the resistance values going through the voltage divider. Hence, we will change the voltage values based on the effect of resistance onto voltage value of a circuit, which is presented by the formula:
+- **The potentiometer (the "pot"):** A potentiometer is a *variable resistor* that allows us to adjust our voltage divider. The idea behind the way the potentiometer on voltage divider is that it changes the resistance values going through the voltage divider. Hence, we will change the voltage values based on the effect of resistance onto voltage value of a circuit, which is presented by the formula:
+
 [Simple voltage formula](https://drive.google.com/file/d/1oqhVUFsj-R9r1wd_B5hHpJMXX-YNMIA2/view)
 
 [Now with the voltage divider, our formula turns into](https://drive.google.com/file/d/1_H_ns-8sXkxy_MkouRRxsUaltquBEgTu/view)
@@ -137,7 +138,7 @@ To light up LED B, we selected two NOT gates, an AND gate and an OR gate. To det
 - **Testing:**LED B needs to be light up when our voltage value is at 0, 1, 2, 3 and 4.
 
 Here is a video of LED B working properly in all cases, lighting up from number 0 to 5.
-  [vid of LED B Working](https://youtube.com/shorts/woT4dJWxtGY?feature=share)
+  [Video of LED B working](https://youtube.com/shorts/woT4dJWxtGY?feature=share)
 
 After building the circuit, we tested to see if it's working as expected. With LED B wired correctly, LED B lights up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination as expected according to the minimized expression, thereby validating the functionality of LED B and Circuit design for it. 
 
@@ -156,7 +157,7 @@ To light up LED C, We selected a NOT gate, an AND gate and an OR gate. This was 
 After determining the necessary gates (IC chips) and executing the wiring process, we connected them accordingly with our K-Maps, ensuring proper routing of inputs and outputs. As always, we powered up the IC chips with Vcc and Gnd for a reliable operation.
 
 Here is a video of LED C working properly in all cases, lighting up from number 0 to 5.
-  [vid of LED C Working](https://youtube.com/shorts/U26imPzQ8zQ?feature=share)
+  [Video of LED C working](https://youtube.com/shorts/U26imPzQ8zQ?feature=share)
 
 To verify the functionality of the circuit, we conducted thorough testing by applying different input combinations and observing the illumination of LED C. We ensured that it lights up as expected for the desired input values to confirm the accuracy of our circuit design.
 
@@ -176,7 +177,7 @@ To light up LED D, We used two NOT gates, one OR gate and one XOR gate. The SOP 
 After determining the necessary gates (IC chips) and managing the wiring process, we connected them accordingly with our K-Maps, ensuring proper routing of inputs and outputs. Again, we powered up the IC chips with Vcc and Gnd for a reliable operation.
 
 Here is a video of LED D working properly in all cases, to light up from number 0 to 5.
-  [Vid of LED D working](https://youtube.com/shorts/KXEbo0dtIIU?feature=share)
+  [Video of LED D working](https://youtube.com/shorts/KXEbo0dtIIU?feature=share)
 
 After building the circuit for D, we tested its correctness. With LED D's combinational logic wired correctly, it lights up. This testing process involved systematically checking different input combinations and verifying the resulting LED illumination as expected according to the minimized expression, thereby validating the functionality of LED D and Circuit design for it. 
 
@@ -204,7 +205,7 @@ Now let's proceed to LED F. If you're run out of holes that are in the same row 
 
 - **Connect with the LED F:** Wire the output of the OR gate to an empty row on the breadboard (let's choose one near the 7-segment). Take a resistor. Connect one end of the resistor to the row that we just pinned the output of circuit in. Connect the other end of the resistor to the F pin on the 7-segment. And... we're done building circuit for LED F.
 
-- **Testing:** Due to the position of LED F, if we have our circuit correct, LED F will light up when the Volt out value of our circuit is at 0, 4, 5. See the video to understand how it works. 
+- **Testing:** Due to the position of LED F, if we have our circuit wired correctly, LED F will light up when the Volt out value of our circuit is at 0, 4, 5. See the video to understand how it works. 
 
 [Video showing how LED F works](https://drive.google.com/file/d/14bWkAK4fRdiGQ1Mi1y7thp1DeyaHTyhj/view?t%253D3)
 
@@ -222,13 +223,13 @@ Let's roll to our last LED, LED G. This one is simple. The boolean expression fo
 
 
 ## Conclusion (Vuong's still working on it)
-This lab is an opportunity to learn how to desgin a complete combinational circuit that allows us to modify the Voltage values to achieve the result we want to see. To sum up, we have worked with several topcis/electrical components in this lab:
+This lab is an opportunity to learn how to design a complete combinational circuit that allows us to modify the Voltage values to achieve the result we want to see. To sum up, we have worked with several topcis and electrical components in this lab:
 
 - **SOP expression and how to use K-map in designing circuit:** This lab gives you a chance to use K-map to simplify SOP expression which is useful for building circuit. Utilizing K-map makes the circuit much simplified and easy to physically wire. 
 
 - **7-segment display**: We're used to the logic probe on our breadboard. The 7-segment display is like a combination of all LEDs on our logic probe that has its LED arranged so that it can send out numerical signals. Just like its name, a 7-segment display has 7 pins where we can wire and connect our circuit to. Each pin takes in an input signal that will light up the LED at that corner. All 7 LEDs (represent 7 pins) form a number ranging from 0 to 9 (we only generate 0-5 signal in this lab). The 7-segment display is used as a Voltage indicator in this lab. 
 
-- **Voltage Divider:** We used Analog Voltage Divider to modify the voltage value going through our LEDs. Due to the way we wired our circuit (according to our input signals), we can control the signal of the 7-segment display by modifying our Analog Voltage Divider. 
+- **Voltage Divider:** We used Analog Voltage Divider to modify the voltage value going through our LEDs. Due to the way we wired our circuit (according to our input signals), we can control the signal of the 7-segment display by modifying our Voltage Divider. 
 
 - **Potentiometer:** or "pot" is used to modify the resistance of the voltage divider.  
 
