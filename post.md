@@ -74,6 +74,19 @@ The Potentiometer now should be able to adjust the value displayed on the Arduin
 
 **Important notes:** We will work with multiple resistors in this lab. The resistors are placed next to the LED segments so that the current does not overload and damage the LED. Most of them will be placed close to each other. In order to keep our current stable, make sure those resistors do not touch each other.
 
+### The circuit on paper: 
+Before jumping right into building the circuit physically, we need to understand how these wires and components interact together. We will need the truth table showing how the inputs are selected: 
+
+[Truth table showing how inputs are selected](https://drive.google.com/file/d/1F6tPZ7Hiy9ZjbHo7ueKtPLv7WOQSMSw_/view)
+
+We will have 3 inputs and 7 outputs represents 7 LEDs - A, B, C, D, E, F, G
+
+After utilizing K-map to simplify the SOP expression, you are recommended to test the correctness of the circuit on Logisim before designing a real circuit. 
+
+[This is how the circuit looks like on Logisim](https://drive.google.com/file/d/19VX75Vw6b9X0MN2GeTNPy5XCgI3wjcKC/view)
+
+The circuit might look complicated but as logn as it follows correctly our truth table, we are good to go!
+
 ### Wire up the Voltage divider:
 We will have to wire 7 LEDs in the lab. However, there is a general way for how we will wire our Voltage Diver and the potentiometer.
 
@@ -86,7 +99,7 @@ Basically, the leftmost connection column of the pot will be wired to `GND`. The
 To make LED A light up when needed, We utilized a combination of XOR, NOT, and OR gates. We minimized the SOP expression needed to light up LED A by using K-Maps. Before even focusing on LED A, we created a LED functionality table with values from 0 to 5 (the numbers we wanted to light up in LED using Potentiometer). In the table, we had three inputs, B2, B1, B0. Since we have three inputs, our table extended from 0 to 7, but we only needed upto 5 so we do not have to care about 6 and 7. Here is a general functionality table that we expanded on and used to create different SOP Expressions for LED A through LED G. We expanded this table depending on our three inputs B2, B1 and B0 and created a truth table for LED A through LED G.
 
 
-Here is the pictures of the General LED Functionality table.
+Here is the picture of the General LED Functionality table.
 
 ![Basic Functionality Table](/resources/FunctionalityTable.png)
 
@@ -100,7 +113,7 @@ Our SOP Expression for LED A is `(~B2)(~B1)(~B0) + (~B2)(B1)(~B0)+ (~B2)(B1)(B0)
 - **OR Operation between `~(B0 XOR B2)` and `B1`:** After inverting the XOR output, we took the output of our NOT gate (7404 chip) and plugged in an OR gate. We used 7432 IC chip to do the OR operation. One 7432 IC chip has 4 different OR gates i.e. 4 different inputs and outputs (2 input = 1 output per gate). Our next input in the OR opration was `B1`. Then we took the output of our OR operation and plugged them as an input to LED A. 
 
 
-- **LED A needs to be light up and in order to show the number 0, 2, 3, and 5.**
+- **Testing:** LED A needs to be light up when our voltage value is at 0, 2, 3, and 5.
 
 
 Here is a video of LED A working properly in all cases, to light up from number 0 to 5.
@@ -121,7 +134,7 @@ To light up LED B, we selected two NOT gates, an AND gate and an OR gate. To det
 - **OR Operation with `~B2`:** Now, we again used the previous 7404 IC Chip to invert `B2` since one 7404 IC chip can work as 6 different NOT gates. Then, we took this output and inputted it in an OR Operation (7432 IC chip). The second input for the OR operation was the output of AND operation between `~B0.B2`. After this, we took the output of this operation and connected this into our LED B to light it up.
 
 
-- **LED B needs to be light up in order to show the number 0, 1, 2, 3 and 4.**
+- **Testing:**LED B needs to be light up when our voltage value is at 0, 1, 2, 3 and 4.
 
 Here is a video of LED B working properly in all cases, lighting up from number 0 to 5.
   [vid of LED B Working](https://youtube.com/shorts/woT4dJWxtGY?feature=share)
@@ -138,7 +151,7 @@ To light up LED C, We selected a NOT gate, an AND gate and an OR gate. This was 
 
 - **OR Operation between `~B1` and output of `B1.B0`:** According to our K-Map, after inverting `B1` and having an output of `B1.B0`, we inputted our output of AND operation and output of our NOT gate into an OR gate (7432 IC Chip). Then, we took the output of this operation and connected it to our LED C and light up LED C.
 
-- **LED C needs to be light up and in order to show the number 0, 1, 3, 4, and 5.**
+- **Testing:** LED C needs to be light up and in order to show the number 0, 1, 3, 4, and 5.
 
 After determining the necessary gates (IC chips) and executing the wiring process, we connected them accordingly with our K-Maps, ensuring proper routing of inputs and outputs. As always, we powered up the IC chips with Vcc and Gnd for a reliable operation.
 
@@ -157,7 +170,7 @@ To light up LED D, We used two NOT gates, one OR gate and one XOR gate. The SOP 
 
 - **OR with `B1`:** Now, we take the output of our XOR operation and input this in an OR gate (7432 IC Chip). Similar to an XOR gate, an OR gate also has 4 different inputs and outputs. Now, we finally completed our K-Map expression. After this, we simply take the output of our operation and connect it with our LED D input.
 
-- **LED D needs to be light up and in order to show the number 0, 2, 3, and 5.**
+- **Testing:** LED D needs to be light up and in order to show the number 0, 2, 3, and 5. 
 
 
 After determining the necessary gates (IC chips) and managing the wiring process, we connected them accordingly with our K-Maps, ensuring proper routing of inputs and outputs. Again, we powered up the IC chips with Vcc and Gnd for a reliable operation.
