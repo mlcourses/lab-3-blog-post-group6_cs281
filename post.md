@@ -73,6 +73,9 @@ Our SOP Expression for LED A is `(~B2)(~B1)(~B0) + (~B2)(B1)(~B0)+ (~B2)(B1)(B0)
 - **OR Operation between `~(B0 XOR B2)` and `B1`:** After inverting the XOR output, we took the output of our NOT gate (7404 chip) and plugged in an OR gate. We used 7432 IC chip to do the OR operation. One 7432 IC chip has 4 different OR gates i.e. 4 different inputs and outputs (2 input = 1 output per gate). Our next input in the OR opration was `B1`. Then we took the output of our OR operation and plugged them as an input to LED A. 
 
 
+- **LED A needs to be light up and also needs to work with other LEDs between B-G to show the number 0, 2, 3, and 5.**
+
+
 Here is a video of LED A working properly in all cases, to light up from number 0 to 5.
   [Vid of LED A Working](https://youtube.com/shorts/AdsHs8C6BbE?feature=share)
 
@@ -90,6 +93,7 @@ To light up LED B, we selected two NOT gates, an AND gate and an OR gate. To det
 - **OR Operation with `~B2`:** Now, we again used the previous 7404 IC Chip to invert `B2` since one 7404 IC chip can work as 6 different NOT gates. Then, we took this output and input-ted it in an OR Operation (7432 IC chip). The second input for the OR operation was the output of AND operation between `~B0.B2`. After this, we took the output of this operation and connected this into our LED B to light up LED B
 
 
+- **LED B needs to be light up and also needs to work with other LEDs between A-G to show the number 0, 1, 2, 3 and 4.**
 
 Here is a video of LED B working properly in all cases, to light up from number 0 to 5.
   [vid of LED B Working](https://youtube.com/shorts/woT4dJWxtGY?feature=share)
@@ -105,6 +109,8 @@ To light up LED C, We selected a NOT gate, an AND gate and an OR gate. This was 
 - **Invert `B1`:** After the AND operation, we Inverted our `B1` using a NOT gate (7404 IC chip). Then, we took the output of this and used in an OR operation.
 
 - **OR Operation between `~B1` and output of `B1.B0`:** According to our K-Map, after inverting `B1` and having an output of `B1.B0`, we input-ed our output of AND operation and output of our NOT gate into an OR gate (7432 IC Chip). Then, we took the output of this operation and connected with the input of our LED C to light up LED C.
+
+- **LED C needs to be light up and also needs to work with other LEDs between A-G to show the number 0, 1, 3, 4, and 5.**
 
 After determining the necessary gates (IC chips) and managin the wiring process, we connected them accordingly with our K-Maps, ensuring proper routing of inputs and outputs. As always, we powered up the IC chips with Vcc and Gnd for a reliable operation.
 
@@ -122,6 +128,8 @@ To light up LED D, We used two NOT gates, one OR gate and one XOR gate. The SOP 
 - **XOR `~B2` and `~B1`:** After inverting them, by input-ing them with two NOT Gates (One 7404 Chip has 6 NOT Gates i.e six different inputs and six outputs), we take the output of these inputs and plug them in (input) in a XOR gate (7486 IC Chip). One 7486 IC Chip has upto 4 different inputs and outputs (two inputs = one output). 
 
 - **OR with `B1`:** Now, we take the output of our XOR operation and input this in an OR gate (7432 IC Chip). Similar to an XOR gate, an OR gate also has 4 different inputs and outputs. Now, we finally completed our K-Map expression. After this, we simply take the output of our operation and connect it with our LED D input.
+
+- **LED D needs to be light up and also needs to work with other LEDs between A-G to show the number 0, 2, 3, and 5.**
 
 
 After determining the necessary gates (IC chips) and managing the wiring process, we connected them accordingly with our K-Maps, ensuring proper routing of inputs and outputs. Again, we powered up the IC chips with Vcc and Gnd for a reliable operation.
